@@ -15,9 +15,10 @@ ativo = data['data']['base']
 moeda = data['data']['currency']
 horario_de_coleta = datetime.now()
 
-dataframe = pd.DataFrame({
-    'ativo': [ativo],
-    'moeda': [moeda],
-    'preco': [preco],
-    'horario_de_coleta': [horario_de_coleta]  
-})
+# Dataframe vinculado aos dados
+dataframe = pd.DataFrame([{
+    'ativo': ativo,
+    'moeda': moeda,
+    'preco': preco,
+    'horario_de_coleta': horario_de_coleta
+}])
